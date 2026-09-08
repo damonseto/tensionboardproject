@@ -17,7 +17,7 @@ climb = generate(model, angle=40, grade=20.0)   # ~V5 at 40 degrees
 plot_climb(climb, holds)
 ```
 
-![V3](examples/example_v3_40) ![V5](examples/example_v5_40) ![V7](examples/example_v7_40)
+![V3](examples/example_v3_40.png) ![V5](examples/example_v5_40.png) ![V7](examples/example_v7_40.png)
 Board rules are enforced during decoding rather than left to the model:
 holds and roles must alternate, no hold repeats, at most two starts, one finish.
 
