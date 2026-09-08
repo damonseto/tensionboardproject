@@ -47,7 +47,8 @@ def load_data(conn):
     """The training set: one row per (climb, angle) pair, filtered."""
     d = pd.read_sql_query(f"""
         SELECT c.uuid, c.name, c.frames,
-               s.angle, s.difficulty_average, s.ascensionist_count
+               s.angle, s.difficulty_average, s.ascensionist_count,
+               s.quality_average
         FROM climbs c
         JOIN climb_stats s ON c.uuid = s.climb_uuid
         WHERE c.layout_id = {LAYOUT_ID} AND s.ascensionist_count >= {MIN_ASCENTS}
